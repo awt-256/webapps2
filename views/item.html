@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extension Manager</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper row purple">
+            <div class="col s1"></div>
+            <div class="col s10">
+                <a href="../app/" class="brand-logo">
+                    <i class="material-icons" style="font-size: 36px">arrow_back</i>
+                    Inventory App
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Title screen -->
+        <div id="viewer">
+            <br>
+            <h2 class="center-align">Item View</h2>
+            <form action="../list">
+                <div class="row">
+                    <div class="input-field col s3">
+                        <input x-data-key="name" class="validate" required style="font-size: 2em" id="item-name" type="text">
+                        <label for="item-name">Item Name</label>
+                    </div>
+                    <div class="col s7"></div>
+                    <div class="input-field col s2">
+                        <input x-data-key="count" class="validate" required id="item-count" type="number">
+                        <label for="item-count">Count</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea x-data-key="desc" id="item-desc" class="materialize-textarea" id="item-desc"
+                            type="text"></textarea>
+                        <label for="item-desc">Description</label>
+                    </div>
+                </div>
+                <div class="center-align row">
+                    <div class="col s2"></div>
+                    <button type="submit" id="save-item" class="col s3 btn-small disabled left blue waves-effect waves-light">
+                        <i class="material-icons right">save</i>
+                        Save
+                    </button>
+                    <div class="col s2"></div>
+                    <a id="delete-item" class="col s3 btn-small red waves-effect waves-light">
+                        <i class="material-icons right">delete</i>
+                        Delete
+                    </a>
+                    <div class="col s2"></div>
+                </div>
+            </form>
+        </div>
+        <div id="not-found" style="display: none">
+            <br>
+            <br>
+            <h2 class="center-align">Item Not Found</h2>
+        </div>
+    </div>
+
+    <!-- <script src="./main.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
